@@ -1,0 +1,53 @@
+Model Context Protocol (MCP) Overview
+
+Architecture:
+- Client-Server Model
+  - Hosts: LLM Applications (e.g., Claude Desktop)
+  - Clients: Establish 1:1 connections with servers
+  - Servers: Provide context, tools, prompts
+
+Core Components:
+1. Protocol Layer
+   - Handles message framing and communication patterns
+   - Classes: Protocol, Client, Server
+2. Transport Layer
+   - Communication methods:
+     - Stdio Transport: Local use with standard input/output
+     - Streamable HTTP Transport: Uses HTTP with Server-Sent Events
+   - Uses JSON-RPC 2.0 for message exchange
+3. Message Types:
+   - Requests: Expect a response
+   - Results: Successful responses
+   - Errors: Indicate request failures
+   - Notifications: One-way messages
+
+Connection Lifecycle:
+1. Initialization:
+   - Client sends initialize request
+   - Server responds
+   - Client acknowledges
+2. Message Exchange:
+   - Request-Response pattern
+   - Notifications
+3. Termination:
+   - Clean shutdown
+   - Transport disconnection
+
+Error Handling:
+- Standard error codes (JSON-RPC)
+- Propagation through error responses, events, handlers
+
+Best Practices:
+1. Transport Selection
+   - Local: Use stdio
+   - Remote: Use Streamable HTTP
+2. Message Handling
+   - Validate inputs
+   - Handle errors
+3. Security Considerations
+   - Use TLS for remote connections
+   - Validate messages
+
+Debugging and Monitoring:
+1. Logging and diagnostics
+2. Testing different transports and error handling

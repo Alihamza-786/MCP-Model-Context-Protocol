@@ -1,0 +1,15 @@
+### Findings on Multi-Agent Systems
+
+#### Paper 1: From Single Agent to Multi-Agent: Improving Traffic Signal Control
+- **Authors**: Maksim Tislenko, Dmitrii Kisilev
+- **Published**: 2024-06-19
+- **Summary**: The paper addresses the increasing importance of traffic signal control due to urbanization. It evaluates various existing methods and proposes increasing the number of agents to reduce average travel times. Experiments conducted on two datasets indicate that multiple agents can enhance existing methods, although the improvement from a fine-tuned large language model approach is minimal.  
+- **PDF**: [Link to Paper](http://arxiv.org/pdf/2406.13693v1)
+
+#### Paper 2: Compact integral manifolds of differential systems
+- **Authors**: V. N. Gorbuzov
+- **Published**: 2010-09-15
+- **Summary**: This paper proves boundedness tests for the number of compact integral manifolds across various systems, including autonomous ordinary differential systems, linear systems of partial differential equations, and more.  
+- **PDF**: [Link to Paper](http://arxiv.org/pdf/1009.2998v1)
+
+These papers provide insights into the application and theoretical advancements in multi-agent systems, particularly in traffic management.
